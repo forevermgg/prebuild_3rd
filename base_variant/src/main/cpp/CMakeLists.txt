@@ -16,6 +16,11 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 find_package(flatbuffers REQUIRED CONFIG)
 
+set(FLATBUFFERS_SRC_INCLUDE ${CMAKE_CURRENT_SOURCE_DIR}/../../../../third_party/flatbuffers/include)
+message("FLATBUFFERS_SRC_INCLUDE ${FLATBUFFERS_SRC_INCLUDE}")
+include_directories(${FLATBUFFERS_SRC_INCLUDE})
+
+
 # Creates and names a library, sets it as either STATIC
 # or SHARED, and provides the relative paths to its source code.
 # You can define multiple libraries, and CMake builds them for you.
