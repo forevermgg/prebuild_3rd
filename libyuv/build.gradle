@@ -10,11 +10,11 @@ ext {
 
 android {
     namespace = "com.google.libyuv"
-    compileSdk = 34
+    compileSdk = 37
     defaultConfig {
         minSdk = 30
         //noinspection EditedTargetSdkVersion
-        targetSdk = 34
+        targetSdk = 37
         versionCode = 1
         versionName = "1.0"
         externalNativeBuild {

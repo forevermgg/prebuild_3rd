@@ -2,15 +2,11 @@ package com.mgg.base
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.TextView
 import com.mgg.base.databinding.ActivityMainBinding
-import com.mgg.varinat.NativeVariantLib
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
-
-    private var testNativeBaseLib = NativeBaseLib()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -20,15 +16,10 @@ class MainActivity : AppCompatActivity() {
 
         // Example of a call to a native method
         binding.sampleText.text = stringFromJNI()
-
-        NativeVariantLib.Companion.toString()
-
-        testNativeBaseLib.register()
     }
 
     override fun onDestroy() {
         super.onDestroy()
-        testNativeBaseLib.unregister()
     }
 
     /**
